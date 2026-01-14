@@ -4,7 +4,9 @@ import random
 
 from player1.player_1 import start_game, ret_len, send_word, ask_answer
 
-start_game()
+#the main code of the program
+file_name=input("enter the file name: ")
+start_game(file_name)
 length=ret_len()
 word=input("write a word with length: "+str(length))
 word=send_word(word)
