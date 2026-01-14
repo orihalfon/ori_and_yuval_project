@@ -1,14 +1,16 @@
-def generate_anagrams(word):
+#gets a word and returns a list of all anagrams of that word
+def generate_anagrams(word:str)-> list: 
     lst=[]
-    rec(word,len(word),lst)
+    rec(word,lst)
     return lst
 
-def rec(word,l,lst,x=""):
-    if len(x)==l:
+# helps generate_anagram
+def rec(word:str,lst:list,x="":str)->None:
+    if len(word)==0:
         lst.append(x)
         return
     for i in range(len(word)):
-        rec(word[:i]+word[i+1:],l,lst,x+word[i])
+        rec(word[:i]+word[i+1:],lst,x+word[i])
 
 
 # x=set(generate_anagrams("abcdefgh"))
