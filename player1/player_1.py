@@ -10,7 +10,7 @@ def start_game(file_name: str ) -> None:
 
 
 # asks the user for an answer and evaluates it against the saved word
-def ask_answer(word: str) -> int:
+def ask_answer(word: str) -> int: 
     og_word=get_word()
     return evaluate(word, og_word)
 
