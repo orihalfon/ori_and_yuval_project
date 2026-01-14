@@ -46,10 +46,10 @@ def remove_from_l(char:str,list_1:list)->list:
 
 # given a guess and the real word, returns an anagram of the real word
 def min_change_anagram(guess: str, real_w: str) -> str:
-    #נייצר שני רשימות של מילת המטרה
+    
     list_1 = list(real_w)
     list_2 = list(real_w)
-    #
+    
     for char in guess:
         if char in list_1:
             remove_from_l(char,list_1)
@@ -65,3 +65,4 @@ def min_change_anagram(guess: str, real_w: str) -> str:
             remove_from_l(char,list_2)
 
     return res
+
