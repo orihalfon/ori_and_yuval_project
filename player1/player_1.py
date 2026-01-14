@@ -1,8 +1,10 @@
 from player1.text_helper import save_word, simplefy_text, get_word, get_random_word
 
 
+
 #starts the game by getting a random word from the story and saving it
 def start_game(file_name: str ) -> None:
+
     text="/Users/orihalfon/PycharmProjects/ori_and_yuval_project/player1/story"
     new_text = simplefy_text(file_name)
     word = get_random_word(new_text)
@@ -61,4 +63,5 @@ def min_change_anagram(guess: str, real_w: str) -> str:
         else:
             res+=char
             remove_from_l(char,list_2)
+
     return res
